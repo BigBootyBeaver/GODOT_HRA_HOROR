@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://uumcawf7a5kp"]
+
+[ext_resource type="PackedScene" uid="uid://d2dqhuy68f8jo" path="res://player/player.tscn" id="1_80nbo"]
+[ext_resource type="Material" uid="uid://ctb3bgwtcqsvh" path="res://level/platform.tres" id="1_feb5d"]
+[ext_resource type="Material" uid="uid://gf6m2ptwry2c" path="res://level/bridge.tres" id="2_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://yfqesavos7ny" path="res://mob.tscn" id="4_fc0e3"]
+
+[sub_resource type="Environment" id="Environment_80nbo"]
+background_mode = 1
+background_color = Color(0.37625542, 0.6514384, 0.9092247, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.8614684, 0.63363236, 0.5076833, 1)
+tonemap_mode = 2
+fog_enabled = true
+fog_light_color = Color(0.4778732, 0.7388352, 0.91534245, 1)
+fog_density = 0.0
+fog_height = 0.4
+fog_height_density = 0.2388
+
+[node name="Game" type="Node3D" unique_id=126367945]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=830178175]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.99951553, -4.0179214, -0.9922104)
+use_collision = true
+size = Vector3(14, 8, 13)
+material = ExtResource("1_feb5d")
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="." unique_id=1537656339]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9995155, -4.0179214, -22.49221)
+use_collision = true
+size = Vector3(14, 8, 8)
+material = ExtResource("1_feb5d")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=1171450962]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5004845, -4.0179214, 14.00779)
+use_collision = true
+size = Vector3(7, 8, 13)
+material = ExtResource("1_feb5d")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="." unique_id=2031773401]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9995155, -1.0179214, 22.50779)
+use_collision = true
+size = Vector3(4, 2, 6)
+material = ExtResource("2_fc0e3")
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="." unique_id=66414201]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.499516, -1.0179214, -9.99221)
+use_collision = true
+size = Vector3(3, 2, 3)
+material = ExtResource("2_fc0e3")
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="." unique_id=123714360]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.499516, -1.0179214, -14.99221)
+use_collision = true
+size = Vector3(3, 2, 3)
+material = ExtResource("2_fc0e3")
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="." unique_id=545458091]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4995155, -1.0179214, -14.99221)
+use_collision = true
+size = Vector3(3, 2, 3)
+material = ExtResource("2_fc0e3")
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="." unique_id=614280046]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5004845, -1.0179214, -10.99221)
+use_collision = true
+size = Vector3(3, 2, 3)
+material = ExtResource("2_fc0e3")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="." unique_id=1523531500]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.499516, -1.0179443, 6.5077896)
+use_collision = true
+size = Vector3(3, 2, 12)
+material = ExtResource("2_fc0e3")
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="." unique_id=424636400]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 21.499516, -1.0179443, 18.00779)
+use_collision = true
+size = Vector3(5, 2, 3)
+material = ExtResource("2_fc0e3")
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="." unique_id=51584769]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 17.499516, -1.0179443, 14.00779)
+use_collision = true
+size = Vector3(3, 2, 11)
+material = ExtResource("2_fc0e3")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=324720387]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.499516, -4.0179214, 0.007789612)
+use_collision = true
+size = Vector3(15, 8, 21)
+material = ExtResource("1_feb5d")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=924014566]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.499516, -4.0179214, 31.50779)
+use_collision = true
+size = Vector3(25, 8, 18)
+material = ExtResource("1_feb5d")
+
+[node name="Player" parent="." unique_id=1487924112 instance=ExtResource("1_80nbo")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1004834571]
+transform = Transform3D(1, 0, 0, 0, 0.7071068, 0.7071068, 0, -0.7071068, 0.7071068, 0, 5, -1)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1183593747]
+environment = SubResource("Environment_80nbo")
+
+[node name="Mob" parent="." unique_id=253766960 instance=ExtResource("4_fc0e3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 6)
+gravity_scale = 0.0
