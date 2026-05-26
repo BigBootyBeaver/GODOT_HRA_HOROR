@@ -12,7 +12,7 @@ config_version=5
 
 config/name="my first 3d game"
 run/main_scene="uid://uumcawf7a5kp"
-config/features=PackedStringArray("4.6", "Mobile")
+config/features=PackedStringArray("4.6", "C#", "Mobile")
 config/icon="res://icon.svg"
 
 [display]

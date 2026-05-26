@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class Bullet : Area3D
+public partial class Bullet3d : Area3D
 {
 	private const float Speed = 15.0f;
 	private const float Range = 40.0f;
