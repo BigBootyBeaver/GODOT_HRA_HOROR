@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://d2dqhuy68f8jo"]
+
+[ext_resource type="PackedScene" uid="uid://dhiogakulfc3y" path="res://player/simple_gun/gun_model.glb" id="1_oul6g"]
+[ext_resource type="Script" uid="uid://ob51hahl2kj8" path="res://player/Player.cs" id="1_rkbax"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kqu6x"]
+
+[node name="Player" type="CharacterBody3D" unique_id=1487924112]
+script = ExtResource("1_rkbax")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1689496009]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_kqu6x")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=2075960861]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 9.313226e-10, 0, 1, 0, -9.313226e-10, 0, 1, 0, 1.5148277, 5.9604645e-08)
+
+[node name="gun_model" parent="Camera3D" unique_id=1434706977 instance=ExtResource("1_oul6g")]
+transform = Transform3D(-0.5311016, 0, -0.008102073, 0, 0.5311633, 0, 0.008102073, 0, -0.5311016, 0.6658005, -0.2995894, -0.87523544)
+
+[node name="Marker3D" type="Marker3D" parent="Camera3D" unique_id=1629996018]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 0.50931823, 0, 0, 0, 1, 0.66267, -0.284804, -1.2407713)
+
+[node name="Timer" type="Timer" parent="." unique_id=474632171]
+unique_name_in_owner = true
+wait_time = 0.2
+one_shot = true
