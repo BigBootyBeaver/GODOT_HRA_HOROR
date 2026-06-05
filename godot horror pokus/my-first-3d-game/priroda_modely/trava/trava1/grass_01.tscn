@@ -1,0 +1,53 @@
+[gd_scene format=4 uid="uid://dphfwixsj1prj"]
+
+[ext_resource type="Texture2D" uid="uid://c2vm1lslm62o5" path="res://trava/trava1/grass_fall.png" id="1_6wvsh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3loj7"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_6wvsh")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n2kte"]
+resource_name = "grass"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 1)
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_iwt0u"]
+_surfaces = [{
+"aabb": AABB(-0.20500001, 0, -0.202, 0.40500003, 0.5, 0.404),
+"format": 34359742465,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAQADAAIABAADAAEABQAEAAEABgAHAAgABwAJAAgACgAJAAcACwAKAAcA"),
+"name": "grass",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("hutRvgAAAAAM1yM8hutRvgAAAD8AAAAAzcxMPgAAAAAM1yM8zcxMPgAAAD8AAAAAzcxMPgAAAAAM1yO8hutRvgAAAAAM1yO8DNcjvAAAAAAX2U6+AAAAAAAAAD8X2U6+DNcjvAAAAAAX2U4+AAAAAAAAAD8X2U4+DNcjPAAAAAAX2U4+DNcjPAAAAAAX2U6+")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1erpa"]
+resource_name = "grass1"
+_surfaces = [{
+"aabb": AABB(-0.20500001, 0, -0.202, 0.40500003, 0.5, 0.404),
+"attribute_data": PackedByteArray("7FG4PAAAgD7rUbg8AAAAAGZmZj4AAIA+Z2ZmPgAAAADsUbg8AACAPmZmZj4AAIA+61G4PAAAAABnZmY+AAAAAOxRuDwAAIA+61G4PAAAAABmZmY+AACAPmdmZj4AAAAA7FG4PAAAgD5mZmY+AACAPutRuDwAAAAAZ2ZmPgAAAAA="),
+"format": 34359742487,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAQADAAIABAAFAAYABQAHAAYACAAJAAoACQALAAoADAANAA4ADQAPAA4A"),
+"material": SubResource("StandardMaterial3D_n2kte"),
+"name": "grass",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("hutRvgAAAAAM1yM8hutRvgAAAD8AAAAAzcxMPgAAAAAM1yM8zcxMPgAAAD8AAAAAhutRvgAAAAAM1yO8zcxMPgAAAAAM1yO8hutRvgAAAD8AAAAAzcxMPgAAAD8AAAAADNcjvAAAAAAX2U6+AAAAAAAAAD8X2U6+DNcjvAAAAAAX2U4+AAAAAAAAAD8X2U4+DNcjPAAAAAAX2U6+DNcjPAAAAAAX2U4+AAAAAAAAAD8X2U6+AAAAAAAAAD8X2U4+/3+Cgv///7//f4KC////v/9/goL///+//3+Cgv///798/f//////P3z9//////8/fP3//////z98/f//////P4ICgoL/f/+/ggKCgv9//7+CAoKC/3//v4ICgoL/f/+/fP2Cgv9//z98/YKC/3//P3z9goL/f/8/fP2Cgv9//z8=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_iwt0u")
+
+[node name="grass01" type="Node3D" unique_id=751124807]
+
+[node name="grass1" type="MeshInstance3D" parent="." unique_id=1313135472]
+material_override = SubResource("StandardMaterial3D_3loj7")
+mesh = SubResource("ArrayMesh_1erpa")

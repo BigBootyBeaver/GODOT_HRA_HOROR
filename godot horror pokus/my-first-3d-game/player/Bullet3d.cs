@@ -20,7 +20,7 @@ public partial class Bullet3d : Area3D
 	// POZOR: Musí zde být "double delta", jinak se pohyb nespustí!
 	public override void _PhysicsProcess(double delta)
 	{
-		GD.Print("Kulka zije!");
+		// GD.Print("Kulka zije!");
 		float floatDelta = (float)delta;
 		float distanceThisFrame = Speed * floatDelta;
 

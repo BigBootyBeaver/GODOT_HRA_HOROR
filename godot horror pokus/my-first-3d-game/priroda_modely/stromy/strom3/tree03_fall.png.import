@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://48oyqwpn7ji1"
-path.s3tc="res://.godot/imported/tree02_fall.png-f9847f1499d3d46318f4cad004d924e6.s3tc.ctex"
+uid="uid://dkt8hgtrpbbmp"
+path.s3tc="res://.godot/imported/tree03_fall.png-871191a377852fdaae3819c6e6b06dab.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://stromy/strom2/tree02_fall.png"
-dest_files=["res://.godot/imported/tree02_fall.png-f9847f1499d3d46318f4cad004d924e6.s3tc.ctex"]
+source_file="res://priroda_modely/stromy/strom3/tree03_fall.png"
+dest_files=["res://.godot/imported/tree03_fall.png-871191a377852fdaae3819c6e6b06dab.s3tc.ctex"]
 
 [params]
 

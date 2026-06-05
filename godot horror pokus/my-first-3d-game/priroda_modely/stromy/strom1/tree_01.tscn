@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://dllkqpqokuiqj"]
 
-[ext_resource type="Texture2D" uid="uid://cigiak76dxltc" path="res://tree01_fall.png" id="1_taktc"]
+[ext_resource type="Texture2D" uid="uid://cigiak76dxltc" path="res://stromy/strom1/tree01_fall.png" id="1_taktc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_24062"]
 albedo_texture = ExtResource("1_taktc")
@@ -44,7 +44,9 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_1ddaa")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hyscn"]
-transparency = 1
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("1_taktc")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_k16yn"]

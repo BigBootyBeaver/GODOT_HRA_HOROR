@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://d054ljqretyqk"
-path="res://.godot/imported/tree01.fbx-f7dd7664623cb7f982a1fe99a359e451.scn"
+uid="uid://c4oskscyccs5o"
+path="res://.godot/imported/tree04.fbx-0d561157f9dcd01d8a7c08211efe39fd.scn"
 
 [deps]
 
-source_file="res://stromy/strom1/tree01.fbx"
-dest_files=["res://.godot/imported/tree01.fbx-f7dd7664623cb7f982a1fe99a359e451.scn"]
+source_file="res://priroda_modely/stromy/strom4/tree04.fbx"
+dest_files=["res://.godot/imported/tree04.fbx-0d561157f9dcd01d8a7c08211efe39fd.scn"]
 
 [params]
 

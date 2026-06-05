@@ -46,7 +46,9 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_n23op")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lnohw"]
-transparency = 1
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("1_8wwbb")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_gys5n"]
