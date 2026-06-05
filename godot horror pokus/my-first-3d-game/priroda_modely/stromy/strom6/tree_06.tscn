@@ -1,9 +1,10 @@
 [gd_scene format=4 uid="uid://cw4yps8mhocrk"]
 
-[ext_resource type="Texture2D" uid="uid://jlicysbelhbr" path="res://stromy/strom6/tree06_fall.png" id="1_kbnj7"]
+[ext_resource type="Texture2D" uid="uid://jlicysbelhbr" path="res://priroda_modely/stromy/strom6/tree06_fall.png" id="1_kbnj7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_st800"]
 albedo_texture = ExtResource("1_kbnj7")
+texture_filter = 0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_odhak"]
 resource_name = "tree06"
@@ -50,6 +51,7 @@ transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("1_kbnj7")
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_nuwcs"]
 _surfaces = [{
@@ -86,6 +88,7 @@ shadow_mesh = SubResource("ArrayMesh_nuwcs")
 [node name="tree06" type="Node3D" unique_id=1499823163]
 
 [node name="tree06" type="MeshInstance3D" parent="." unique_id=1663460590]
+transform = Transform3D(2.5600002, 0, 0, 0, 2.5600002, 0, 0, 0, 2.5600002, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_st800")
 mesh = SubResource("ArrayMesh_fmv6i")
 

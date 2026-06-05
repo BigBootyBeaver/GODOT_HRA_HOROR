@@ -1,0 +1,207 @@
+[gd_scene format=3 uid="uid://cacey3enr3g6o"]
+
+[ext_resource type="Texture2D" uid="uid://dj0qmbkpky647" path="res://terrain/trava/Grass_01/Grass_01_basecolor.png" id="1_gm3ck"]
+[ext_resource type="Texture2D" uid="uid://bv0ugv7wdiwir" path="res://terrain/trava/Grass_01/Grass_01_normal.png" id="2_30u5i"]
+[ext_resource type="Texture2D" uid="uid://sehkof0qol7i" path="res://terrain/trava/Grass_02/Grass_02_basecolor.png" id="3_n5w8y"]
+[ext_resource type="Texture2D" uid="uid://dnapk68xsg7wk" path="res://terrain/trava/Grass_02/Grass_02_normal.png" id="4_5cfy8"]
+[ext_resource type="PackedScene" uid="uid://d2dqhuy68f8jo" path="res://player/player.tscn" id="5_y4rev"]
+[ext_resource type="PackedScene" uid="uid://cxolvqeavyjk6" path="res://priroda_modely/kere/ker2/bush_02.tscn" id="6_xp37f"]
+[ext_resource type="PackedScene" uid="uid://cmwml0blp6lpp" path="res://priroda_modely/kere/ker1/bush_01.tscn" id="7_fxcxd"]
+[ext_resource type="PackedScene" uid="uid://og6a0k4g57e3" path="res://priroda_modely/kere/ker3/bush_03.tscn" id="8_ahmby"]
+[ext_resource type="PackedScene" uid="uid://jtga6u36qm1m" path="res://priroda_modely/kere/ker4/bush_04.tscn" id="9_gnpsn"]
+[ext_resource type="PackedScene" uid="uid://dphfwixsj1prj" path="res://priroda_modely/trava/trava1/grass_01.tscn" id="10_17ax0"]
+[ext_resource type="PackedScene" uid="uid://bguqmk76iy1nb" path="res://priroda_modely/trava/trava_bush/grass_bush.tscn" id="11_anxg1"]
+[ext_resource type="PackedScene" uid="uid://bn0885tn21q7r" path="res://priroda_modely/trava/trava3/grass_03.tscn" id="12_0ro60"]
+[ext_resource type="PackedScene" uid="uid://c8quov21yqhcl" path="res://priroda_modely/trava/trava2/grass_02.tscn" id="13_evd6h"]
+[ext_resource type="PackedScene" uid="uid://bu0vew6j8tw85" path="res://priroda_modely/stromy/strom3/tree_03.tscn" id="14_ahmby"]
+[ext_resource type="PackedScene" uid="uid://35ibfib2qhsm" path="res://priroda_modely/stromy/strom2/tree_02.tscn" id="15_gnpsn"]
+
+[sub_resource type="Gradient" id="Gradient_mtrv6"]
+offsets = PackedFloat32Array(0.2, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_aqenb"]
+noise_type = 2
+frequency = 0.03
+cellular_jitter = 3.0
+cellular_return_type = 0
+domain_warp_enabled = true
+domain_warp_type = 1
+domain_warp_amplitude = 50.0
+domain_warp_fractal_type = 2
+domain_warp_fractal_lacunarity = 1.5
+domain_warp_fractal_gain = 1.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_03g65"]
+noise = SubResource("FastNoiseLite_aqenb")
+color_ramp = SubResource("Gradient_mtrv6")
+seamless = true
+
+[sub_resource type="Terrain3DMaterial" id="Terrain3DMaterial_heyb0"]
+_shader_parameters = {
+&"bias_distance": null,
+&"blend_sharpness": 0.5,
+&"depth_blur": null,
+&"enable_macro_variation": null,
+&"enable_projection": null,
+&"flat_terrain_normals": null,
+&"macro_variation1": null,
+&"macro_variation2": null,
+&"macro_variation_slope": null,
+&"mipmap_bias": null,
+&"noise1_angle": null,
+&"noise1_offset": null,
+&"noise1_scale": null,
+&"noise2_scale": null,
+&"noise_texture": SubResource("NoiseTexture2D_03g65"),
+&"projection_threshold": null
+}
+world_background = 0
+texture_filtering = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1becl"]
+transparency = 4
+cull_mode = 2
+vertex_color_use_as_albedo = true
+backlight_enabled = true
+backlight = Color(0.5, 0.5, 0.5, 1)
+distance_fade_mode = 1
+distance_fade_min_distance = 128.0
+distance_fade_max_distance = 96.0
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_nhp4m"]
+generated_type = 1
+height_offset = 0.5
+material_override = SubResource("StandardMaterial3D_1becl")
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 128.0
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_cc3xx"]
+name = "Grass_01_basecolor"
+albedo_texture = ExtResource("1_gm3ck")
+normal_texture = ExtResource("2_30u5i")
+uv_scale = 0.25
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_xp37f"]
+name = "Grass_02_basecolor"
+id = 1
+albedo_texture = ExtResource("3_n5w8y")
+normal_texture = ExtResource("4_5cfy8")
+uv_scale = 0.25
+
+[sub_resource type="Terrain3DAssets" id="Terrain3DAssets_30u5i"]
+mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_nhp4m")])
+texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_cc3xx"), SubResource("Terrain3DTextureAsset_xp37f")])
+
+[sub_resource type="Environment" id="Environment_n5w8y"]
+background_mode = 1
+background_color = Color(0.65, 0.65, 0.65, 1)
+
+[node name="Node3D" type="Node3D" unique_id=1848306530]
+
+[node name="Terrain3D" type="Terrain3D" parent="." unique_id=2142556377]
+data_directory = "res://terrains_data"
+material = SubResource("Terrain3DMaterial_heyb0")
+assets = SubResource("Terrain3DAssets_30u5i")
+top_level = true
+metadata/_edit_lock_ = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=733690773]
+environment = SubResource("Environment_n5w8y")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1751988114]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.7071068, 0, -0.7071068, 0.70710677, 0, 36, 0)
+
+[node name="Player" parent="." unique_id=1487924112 instance=ExtResource("5_y4rev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="bush02" parent="." unique_id=659486641 instance=ExtResource("6_xp37f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -1, -10)
+
+[node name="bush01" parent="." unique_id=1693270175 instance=ExtResource("7_fxcxd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, -4)
+
+[node name="bush03" parent="." unique_id=720567923 instance=ExtResource("7_fxcxd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -6)
+
+[node name="bush04" parent="." unique_id=1690847342 instance=ExtResource("6_xp37f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -6)
+
+[node name="bush05" parent="." unique_id=653139397 instance=ExtResource("8_ahmby")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, -3)
+
+[node name="bush06" parent="." unique_id=349375333 instance=ExtResource("9_gnpsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, -11)
+
+[node name="bush07" parent="." unique_id=1261121260 instance=ExtResource("6_xp37f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -1)
+
+[node name="bush08" parent="." unique_id=1813123434 instance=ExtResource("6_xp37f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, -16)
+
+[node name="bush09" parent="." unique_id=1359717343 instance=ExtResource("8_ahmby")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, -10)
+
+[node name="bush10" parent="." unique_id=999209411 instance=ExtResource("9_gnpsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, -6)
+
+[node name="bush11" parent="." unique_id=1479260532 instance=ExtResource("9_gnpsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -2)
+
+[node name="bush12" parent="." unique_id=572234254 instance=ExtResource("9_gnpsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -10)
+
+[node name="bush13" parent="." unique_id=6044030 instance=ExtResource("9_gnpsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, -14)
+
+[node name="grass01" parent="." unique_id=751124807 instance=ExtResource("10_17ax0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -12)
+
+[node name="grass02" parent="." unique_id=144724695 instance=ExtResource("10_17ax0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, -13)
+
+[node name="grass03" parent="." unique_id=1469194013 instance=ExtResource("10_17ax0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, -8)
+
+[node name="grass_bush" parent="." unique_id=47790118 instance=ExtResource("11_anxg1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -8)
+
+[node name="grass_bush2" parent="." unique_id=1682333898 instance=ExtResource("11_anxg1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, -12)
+
+[node name="grass_bush3" parent="." unique_id=1791149691 instance=ExtResource("11_anxg1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -5)
+
+[node name="grass_bush4" parent="." unique_id=148092988 instance=ExtResource("11_anxg1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, -6)
+
+[node name="grass_bush5" parent="." unique_id=1256268826 instance=ExtResource("11_anxg1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -1)
+
+[node name="grass_bush6" parent="." unique_id=66321731 instance=ExtResource("11_anxg1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, -4)
+
+[node name="grass_bush7" parent="." unique_id=2074776193 instance=ExtResource("11_anxg1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -13)
+
+[node name="grass04" parent="." unique_id=1196657807 instance=ExtResource("12_0ro60")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -9)
+
+[node name="grass05" parent="." unique_id=1676069769 instance=ExtResource("12_0ro60")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -7)
+
+[node name="grass06" parent="." unique_id=34182284 instance=ExtResource("12_0ro60")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -4)
+
+[node name="grass07" parent="." unique_id=516962189 instance=ExtResource("13_evd6h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -11)
+
+[node name="grass08" parent="." unique_id=1103407227 instance=ExtResource("13_evd6h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -2)
+
+[node name="tree03" parent="." unique_id=1290536446 instance=ExtResource("14_ahmby")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -4)
+
+[node name="tree02" parent="." unique_id=1309720374 instance=ExtResource("15_gnpsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -12)

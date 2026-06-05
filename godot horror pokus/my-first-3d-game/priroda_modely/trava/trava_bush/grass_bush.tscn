@@ -1,12 +1,13 @@
 [gd_scene format=4 uid="uid://bguqmk76iy1nb"]
 
-[ext_resource type="Texture2D" uid="uid://cv06pbpol0oqk" path="res://trava/trava_bush/grass_bush_fall.png" id="1_o8qme"]
+[ext_resource type="Texture2D" uid="uid://cv06pbpol0oqk" path="res://priroda_modely/trava/trava_bush/grass_bush_fall.png" id="1_o8qme"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5ysj1"]
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("1_o8qme")
+texture_filter = 0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nolwg"]
 resource_name = "grass_bush"
@@ -49,5 +50,6 @@ shadow_mesh = SubResource("ArrayMesh_2p3yq")
 [node name="grass_bush" type="Node3D" unique_id=47790118]
 
 [node name="grass_bush" type="MeshInstance3D" parent="." unique_id=1602283645]
+transform = Transform3D(2.47, 0, 0, 0, 2.47, 0, 0, 0, 2.47, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_5ysj1")
 mesh = SubResource("ArrayMesh_8bqet")

@@ -27,6 +27,10 @@ window/stretch/mode="viewport"
 
 project/assembly_name="my first 3d game"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/terrain_3d/plugin.cfg")
+
 [input]
 
 move_left={

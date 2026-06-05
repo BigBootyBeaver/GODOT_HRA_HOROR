@@ -7,6 +7,7 @@ transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("1_hx3pq")
+texture_filter = 0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qde8p"]
 resource_name = "bush1"
@@ -49,5 +50,6 @@ shadow_mesh = SubResource("ArrayMesh_03xc5")
 [node name="bush01" type="Node3D" unique_id=1693270175]
 
 [node name="bush1" type="MeshInstance3D" parent="." unique_id=1597293716]
+transform = Transform3D(2.2, 0, 0, 0, 2.2, 0, 0, 0, 2.2, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_iy8hq")
 mesh = SubResource("ArrayMesh_73kg4")

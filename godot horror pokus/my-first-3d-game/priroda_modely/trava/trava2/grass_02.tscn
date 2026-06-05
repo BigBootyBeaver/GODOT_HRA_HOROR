@@ -1,12 +1,13 @@
 [gd_scene format=4 uid="uid://c8quov21yqhcl"]
 
-[ext_resource type="Texture2D" uid="uid://c2vm1lslm62o5" path="res://trava/trava2/grass_fall.png" id="1_2a5kg"]
+[ext_resource type="Texture2D" uid="uid://c2vm1lslm62o5" path="res://priroda_modely/trava/trava3/grass_fall.png" id="1_2a5kg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mvuxj"]
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("1_2a5kg")
+texture_filter = 0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i7svu"]
 resource_name = "grass"
@@ -49,5 +50,6 @@ shadow_mesh = SubResource("ArrayMesh_ur6le")
 [node name="grass02" type="Node3D" unique_id=516962189]
 
 [node name="grass2" type="MeshInstance3D" parent="." unique_id=1603365272]
+transform = Transform3D(3.96, 0, 0, 0, 3.96, 0, 0, 0, 3.96, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_mvuxj")
 mesh = SubResource("ArrayMesh_78qkt")

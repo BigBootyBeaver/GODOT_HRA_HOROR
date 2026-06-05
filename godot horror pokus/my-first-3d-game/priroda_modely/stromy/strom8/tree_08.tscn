@@ -1,9 +1,10 @@
 [gd_scene format=4 uid="uid://ce72fmwrmdwuo"]
 
-[ext_resource type="Texture2D" uid="uid://h6ms2s8u70xb" path="res://stromy/strom8/tree08_fall.png" id="1_pcqcq"]
+[ext_resource type="Texture2D" uid="uid://h6ms2s8u70xb" path="res://priroda_modely/stromy/strom8/tree08_fall.png" id="1_pcqcq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xj5ce"]
 albedo_texture = ExtResource("1_pcqcq")
+texture_filter = 0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xklls"]
 resource_name = "tree08"
@@ -50,6 +51,7 @@ transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("1_pcqcq")
+texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_gun6j"]
 _surfaces = [{
@@ -86,6 +88,7 @@ shadow_mesh = SubResource("ArrayMesh_gun6j")
 [node name="tree08" type="Node3D" unique_id=581025129]
 
 [node name="tree08" type="MeshInstance3D" parent="." unique_id=1105741782]
+transform = Transform3D(3.96, 0, 0, 0, 3.96, 0, 0, 0, 3.96, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_xj5ce")
 mesh = SubResource("ArrayMesh_j1m8c")
 
