@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://d26q07qtoljse"]
 
 [ext_resource type="Texture2D" uid="uid://dbcm6s1cqiwrq" path="res://priroda_modely/stromy/strom7/tree07_fall.png" id="1_hr500"]
+[ext_resource type="Script" uid="uid://djuiccs0glsc5" path="res://TreeMerger.cs" id="2_tyiv3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vrn74"]
 albedo_texture = ExtResource("1_hr500")
@@ -92,7 +93,12 @@ transform = Transform3D(2.6, 0, 0, 0, 2.6, 0, 0, 0, 2.6, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_vrn74")
 mesh = SubResource("ArrayMesh_pttej")
 
-[node name="tree07_top" type="MeshInstance3D" parent="tree07" unique_id=103196243]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.7000003, 0)
+[node name="tree07_top" type="MeshInstance3D" parent="." unique_id=103196243]
+transform = Transform3D(2.6, 0, 0, 0, 2.6, 0, 0, 0, 2.6, 0, 7.0200005, 0)
 material_override = SubResource("StandardMaterial3D_dx1ub")
 mesh = SubResource("ArrayMesh_raf8n")
+
+[node name="Node" type="Node" parent="." unique_id=576133912 node_paths=PackedStringArray("KmenNode", "KorunaNode")]
+script = ExtResource("2_tyiv3")
+KmenNode = NodePath("../tree07")
+KorunaNode = NodePath("../tree07_top")

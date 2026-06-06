@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cfrtuon338mvy"]
+
+[ext_resource type="ArrayMesh" uid="uid://bopxkhc4l1m5i" path="res://priroda_modely/stromy/strom7/hotovy_strom.mesh" id="1_xl13c"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_8xk6l"]
+height = 3.2177734
+radius = 0.3696289
+
+[node name="Node3D" type="StaticBody3D" unique_id=716656445]
+
+[node name="HotovyStrom" type="MeshInstance3D" parent="." unique_id=2042110962]
+visibility_range_end = 128.0
+mesh = ExtResource("1_xl13c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=887945936]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6088867, 0)
+shape = SubResource("CylinderShape3D_8xk6l")

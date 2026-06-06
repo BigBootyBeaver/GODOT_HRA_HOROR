@@ -1,15 +1,17 @@
 [gd_scene format=3 uid="uid://d3f2kb64h2huq"]
 
-[ext_resource type="ArrayMesh" uid="uid://6xvlmwwb22uj" path="res://hotovy_strom.mesh" id="1_x6tju"]
+[ext_resource type="ArrayMesh" uid="uid://6xvlmwwb22uj" path="res://priroda_modely/stromy/strom1/hotovy_strom.mesh" id="1_x6tju"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_ug51l"]
-height = 3.578125
+height = 4.7890625
+radius = 0.43359375
 
 [node name="Node3D" type="StaticBody3D" unique_id=1334036398]
 
 [node name="HotovyStrom" type="MeshInstance3D" parent="." unique_id=312054151]
+visibility_range_end = 128.0
 mesh = ExtResource("1_x6tju")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1148548154]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6328125, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2382813, 0)
 shape = SubResource("CylinderShape3D_ug51l")
