@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://dllkqpqokuiqj"]
 
 [ext_resource type="Texture2D" uid="uid://cigiak76dxltc" path="res://priroda_modely/stromy/strom1/tree01_fall.png" id="1_taktc"]
+[ext_resource type="Script" uid="uid://djuiccs0glsc5" path="res://TreeMerger.cs" id="2_0wito"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_24062"]
 albedo_texture = ExtResource("1_taktc")
@@ -83,14 +84,19 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_k16yn")
 
-[node name="tree01" type="Node3D" unique_id=381825465]
+[node name="tree01" type="Node3D" unique_id=526704453]
 
 [node name="tree01" type="MeshInstance3D" parent="." unique_id=1042125407]
 transform = Transform3D(3.1416001, 0, 0, 0, 3.1416001, 0, 0, 0, 3.1416001, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_24062")
 mesh = SubResource("ArrayMesh_cavdf")
 
-[node name="tree01_top" type="MeshInstance3D" parent="tree01" unique_id=1087360008]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.4, 0.001)
+[node name="tree01_top" type="MeshInstance3D" parent="." unique_id=1087360008]
+transform = Transform3D(3.1416001, 0, 0, 0, 3.1416001, 0, 0, 0, 3.1416001, 0, 7.5398407, 0.0031416002)
 material_override = SubResource("StandardMaterial3D_hyscn")
 mesh = SubResource("ArrayMesh_46gdp")
+
+[node name="Merger" type="Node" parent="." unique_id=1918027448 node_paths=PackedStringArray("KmenNode", "KorunaNode")]
+script = ExtResource("2_0wito")
+KmenNode = NodePath("../tree01")
+KorunaNode = NodePath("../tree01_top")

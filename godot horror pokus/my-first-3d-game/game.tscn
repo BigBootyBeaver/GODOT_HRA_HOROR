@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://cxolvqeavyjk6" path="res://priroda_modely/kere/ker2/bush_02.tscn" id="18_rvswv"]
 [ext_resource type="PackedScene" uid="uid://og6a0k4g57e3" path="res://priroda_modely/kere/ker3/bush_03.tscn" id="19_boyg6"]
 [ext_resource type="PackedScene" uid="uid://jtga6u36qm1m" path="res://priroda_modely/kere/ker4/bush_04.tscn" id="20_e36ub"]
+[ext_resource type="PackedScene" uid="uid://d3f2kb64h2huq" path="res://priroda_modely/stromy/strom1/kombo_tree01.tscn" id="21_hb5m1"]
 
 [sub_resource type="Environment" id="Environment_80nbo"]
 background_mode = 1
@@ -172,3 +173,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 30)
 
 [node name="bush04" parent="." unique_id=349375333 instance=ExtResource("20_e36ub")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 33)
+
+[node name="Node3D" parent="." unique_id=268743492 instance=ExtResource("21_hb5m1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 1, 41)
