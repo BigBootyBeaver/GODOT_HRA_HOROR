@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://nv4ndh8p84nv"]
 
 [ext_resource type="Texture2D" uid="uid://c4ismf7fu3yqi" path="res://priroda_modely/stromy/strom4/tree04_fall.png" id="1_rumvp"]
+[ext_resource type="Script" uid="uid://djuiccs0glsc5" path="res://TreeMerger.cs" id="2_kts16"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fiuau"]
 albedo_texture = ExtResource("1_rumvp")
@@ -44,6 +45,20 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_u15lh")
 
+[sub_resource type="Animation" id="Animation_81un6"]
+resource_name = "tree04|tree03Action"
+length = 0.041666668
+
+[sub_resource type="Animation" id="Animation_pwlnj"]
+resource_name = "tree04|tree04Action"
+length = 0.041666668
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4fg15"]
+_data = {
+&"tree04|tree03Action": SubResource("Animation_81un6"),
+&"tree04|tree04Action": SubResource("Animation_pwlnj")
+}
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xrx00"]
 transparency = 2
 alpha_scissor_threshold = 0.5
@@ -83,20 +98,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_dlmno")
 
-[sub_resource type="Animation" id="Animation_81un6"]
-resource_name = "tree04|tree03Action"
-length = 0.041666668
-
-[sub_resource type="Animation" id="Animation_pwlnj"]
-resource_name = "tree04|tree04Action"
-length = 0.041666668
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_4fg15"]
-_data = {
-&"tree04|tree03Action": SubResource("Animation_81un6"),
-&"tree04|tree04Action": SubResource("Animation_pwlnj")
-}
-
 [node name="tree04" type="Node3D" unique_id=2000844884]
 
 [node name="tree04" type="MeshInstance3D" parent="." unique_id=239555096]
@@ -104,10 +105,15 @@ transform = Transform3D(2.25, 0, 0, 0, 2.25, 0, 0, 0, 2.25, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_fiuau")
 mesh = SubResource("ArrayMesh_uq6v5")
 
-[node name="tree04_top" type="MeshInstance3D" parent="tree04" unique_id=1187173944]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.4, 0)
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=391350745]
+libraries/ = SubResource("AnimationLibrary_4fg15")
+
+[node name="tree04_top" type="MeshInstance3D" parent="." unique_id=1187173944]
+transform = Transform3D(2.25, 0, 0, 0, 2.25, 0, 0, 0, 2.25, 0, 5.4, 0)
 material_override = SubResource("StandardMaterial3D_xrx00")
 mesh = SubResource("ArrayMesh_mev2g")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=391350745]
-libraries/ = SubResource("AnimationLibrary_4fg15")
+[node name="Node" type="Node" parent="." unique_id=788570340 node_paths=PackedStringArray("KmenNode", "KorunaNode")]
+script = ExtResource("2_kts16")
+KmenNode = NodePath("../tree04")
+KorunaNode = NodePath("../tree04_top")
