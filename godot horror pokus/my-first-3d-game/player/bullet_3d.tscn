@@ -1,19 +1,17 @@
 [gd_scene format=3 uid="uid://bn30qhhv4f15q"]
 
-[ext_resource type="Script" uid="uid://cdsujfp1iy5kq" path="res://player/Bullet3d.cs" id="1_hgguu"]
+[ext_resource type="Script" uid="uid://bkagwpvilvgbw" path="res://player/bullet_3d.gd" id="1_hgguu"]
 [ext_resource type="PackedScene" uid="uid://cuupjiqng7ure" path="res://player/projectile/projectile_3d.tscn" id="1_kixxk"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_hgguu"]
-radius = 0.4
+[sub_resource type="SphereShape3D" id="SphereShape3D_kixxk"]
+radius = 0.19637668
 
-[node name="Bullet3D" type="Area3D" unique_id=1268169208]
+[node name="Bullet3D" type="Area3D" unique_id=2043006103]
 top_level = true
 script = ExtResource("1_hgguu")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1214221684]
-shape = SubResource("SphereShape3D_hgguu")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=806405722]
+shape = SubResource("SphereShape3D_kixxk")
 
 [node name="Projectile3D" parent="." unique_id=46327550 instance=ExtResource("1_kixxk")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+transform = Transform3D(-2.518559e-08, 0, 0.57617915, 0, 0.57617915, 0, -0.57617915, 0, -2.518559e-08, 0, 0, 0)

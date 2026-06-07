@@ -5,6 +5,5 @@
 [resource]
 resource_name = "bat_mat"
 cull_mode = 2
-albedo_color = Color(0, 0, 0, 1)
 albedo_texture = ExtResource("1_5napd")
 roughness = 0.42727274
