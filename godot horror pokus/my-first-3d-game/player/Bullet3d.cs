@@ -35,9 +35,12 @@ public partial class Bullet3d : Area3D
 			QueueFree();
 		}
 	}
-
 	private void OnBodyEntered(Node3D body)
 	{
 		QueueFree();
+		if (body.HasMethod("take_damage"))
+	{
+		body.Call("take_damage");
+	}
 	}
 }

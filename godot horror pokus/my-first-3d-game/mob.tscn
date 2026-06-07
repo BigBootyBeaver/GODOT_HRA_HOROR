@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://yfqesavos7ny"]
+
+[ext_resource type="Script" uid="uid://dnxxs05vay4mg" path="res://mob.gd" id="1_nokgg"]
+[ext_resource type="PackedScene" uid="uid://bgfmkq8crhed8" path="res://mob/bat_model.tscn" id="2_ubaqv"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_nokgg"]
+radius = 0.33
+
+[node name="Mob" type="RigidBody3D" unique_id=919836396]
+gravity_scale = 0.0
+script = ExtResource("1_nokgg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1444743695]
+shape = SubResource("SphereShape3D_nokgg")
+
+[node name="bat_model" parent="." unique_id=1078126013 instance=ExtResource("2_ubaqv")]
+unique_name_in_owner = true
