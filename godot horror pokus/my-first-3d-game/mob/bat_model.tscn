@@ -71,7 +71,6 @@ animation = &"Idle"
 [sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_xjlni"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_dmdl0"]
-graph_offset = Vector2(-225.86612, -4.3811045)
 nodes/output/position = Vector2(688, 32)
 nodes/Idle/node = SubResource("AnimationNodeAnimation_xl0h5")
 nodes/Idle/position = Vector2(112, 16)
