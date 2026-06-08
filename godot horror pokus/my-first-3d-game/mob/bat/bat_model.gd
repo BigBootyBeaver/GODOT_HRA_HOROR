@@ -1,4 +1,4 @@
-extends Node3D
+extends Area3D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -16,5 +16,4 @@ func hurt():
 	print("Funguje to")
 	animation_tree.set(
 	"parameters/OneShot/request",
-	AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE,
-)
+	AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE,)

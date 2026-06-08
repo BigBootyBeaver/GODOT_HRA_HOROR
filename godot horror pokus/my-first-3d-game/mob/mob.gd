@@ -5,7 +5,14 @@ var speed = 3.0
 @onready var bat_model: Node3D = %bat_model
 @onready var timer = %Timer
 
-@onready var player = get_node("/root/Game/Player")
+# @onready var player = get_node("/root/Game/Player")
+# řádek nahoře je tu normálně, řádky začánající na (var player) a (func ready) tu jsou místo toho.
+
+var player: Node3D
+
+func _ready() -> void:
+	# Najde prvního uzla ve skupině "player" bez ohledu na strukturu scény
+	player = get_tree().get_first_node_in_group("player")
 
 func _physics_process(delta):
 	var direction = global_position.direction_to(player.global_position)
