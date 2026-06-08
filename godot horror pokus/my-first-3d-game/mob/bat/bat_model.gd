@@ -13,6 +13,7 @@ func _process(delta: float) -> void:
 
 
 func hurt():
+	print("Funguje to")
 	animation_tree.set(
 	"parameters/OneShot/request",
 	AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE,

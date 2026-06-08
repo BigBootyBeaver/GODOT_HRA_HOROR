@@ -11,7 +11,7 @@ func _physics_process(delta):
 		queue_free()
 
 func _on_body_entered(body): 
-	
+	print("kulka narazila")
 	if body.has_method("take_damage"): 
 		body.take_damage()  
 	queue_free() 

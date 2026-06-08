@@ -180,4 +180,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 33)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 1, 41)
 
 [node name="Mob" parent="." unique_id=919836396 instance=ExtResource("22_x5p1p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.986052, 1.2981519, 2.6335697)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.986052, 1.2981519, 26.63357)
