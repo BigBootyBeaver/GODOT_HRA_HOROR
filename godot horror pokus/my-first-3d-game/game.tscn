@@ -180,7 +180,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 33)
 [node name="Node3D" parent="." unique_id=268743492 instance=ExtResource("21_hb5m1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 1, 41)
 
-[node name="MobSpawner3D" parent="Node3D" unique_id=608168903 instance=ExtResource("22_qhcbd")]
-
 [node name="Mob" parent="." unique_id=1153872926 instance=ExtResource("22_x5p1p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 1, 29)
+
+[node name="MobSpawner3D" parent="." unique_id=608168903 instance=ExtResource("22_qhcbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 3, 37)

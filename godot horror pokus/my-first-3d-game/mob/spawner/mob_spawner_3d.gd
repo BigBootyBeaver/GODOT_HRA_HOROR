@@ -6,4 +6,5 @@ extends Node3D
 func _on_timer_timeout() -> void:
 	var new_mob = mob_to_spawn.instantiate()
 	add_child(new_mob)
+	print("spawnul se mob")
 	new_mob.global_position = marker_3d.global_position

@@ -15,6 +15,7 @@
 [ext_resource type="Script" uid="uid://cshu312pwrtuu" path="res://addons/proton_scatter/src/shapes/sphere_shape.gd" id="12_rlpes"]
 [ext_resource type="Script" uid="uid://dnjnwwl0qf0rx" path="res://addons/proton_scatter/src/shapes/box_shape.gd" id="14_fxcxd"]
 [ext_resource type="PackedScene" uid="uid://yfqesavos7ny" path="res://mob/mob.tscn" id="15_ahmby"]
+[ext_resource type="PackedScene" uid="uid://c155fa8c2gbbs" path="res://mob/spawner/mob_spawner_3d.tscn" id="16_gnpsn"]
 
 [sub_resource type="Gradient" id="Gradient_mtrv6"]
 offsets = PackedFloat32Array(0.2, 1)
@@ -692,3 +693,7 @@ metadata/_custom_type_script = "uid://ba0xhlkd6x2fh"
 
 [node name="Mob" parent="." unique_id=1541742935 instance=ExtResource("15_ahmby")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131.77307, 2.9883165, 136.62329)
+gravity_scale = 0.0
+
+[node name="MobSpawner3D" parent="." unique_id=608168903 instance=ExtResource("16_gnpsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127.91939, 3.7977438, 135.89137)
