@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cm25o61v0p6j2"]
+
+[ext_resource type="Script" uid="uid://bt0fbfimewgs2" path="res://baterky/flashlight.gd" id="1_n6vr5"]
+[ext_resource type="PackedScene" uid="uid://b0sqmokeeugnx" path="res://baterky/flash_light_001.tscn" id="1_waro5"]
+
+[node name="Flashlight" type="Node3D" unique_id=1917803286]
+script = ExtResource("1_n6vr5")
+
+[node name="FlashLight_001" parent="." unique_id=1891490947 instance=ExtResource("1_waro5")]
+transform = Transform3D(2.2, 0, 0, 0, 2.2, 0, 0, 0, 2.2, 0, 0, 0)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=512688136]
+unique_name_in_owner = true
+transform = Transform3D(0, 4.371139e-08, -1, 0, -1, -4.371139e-08, -1, 0, 0, 0.20076689, 0, 0)
+light_energy = 0.0
+spot_range = 16.0
+spot_angle = 35.0
+
+[node name="Battery" type="ProgressBar" parent="." unique_id=2005106765]
+unique_name_in_owner = true
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -84.0
+offset_top = -27.0
+offset_right = 84.0
+grow_horizontal = 2
+grow_vertical = 0
+max_value = 20000.0
+step = 1.0
+value = 20000.0
+
+[editable path="FlashLight_001"]

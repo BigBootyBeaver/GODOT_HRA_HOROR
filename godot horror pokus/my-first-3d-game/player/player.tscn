@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dhiogakulfc3y" path="res://player/simple_gun/gun_model.glb" id="1_oul6g"]
 [ext_resource type="Script" uid="uid://dyl3cmc86koc" path="res://player/player.gd" id="1_rkbax"]
+[ext_resource type="PackedScene" uid="uid://cm25o61v0p6j2" path="res://baterky/Flashlight.tscn" id="3_g1dw6"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kqu6x"]
 
@@ -23,6 +24,9 @@ transform = Transform3D(-0.5311016, 0, -0.008102073, 0, 0.5311633, 0, 0.00810207
 [node name="Marker3D" type="Marker3D" parent="Camera3D" unique_id=1690636022]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.66005045, -0.28193372, -1.3192596)
+
+[node name="Node3D" parent="Camera3D" unique_id=1917803286 instance=ExtResource("3_g1dw6")]
+transform = Transform3D(-4.2780066e-08, 0, 1, 0, 1, 0, -1, 0, -4.2780066e-08, -0.58393145, -0.2365424, -0.71534437)
 
 [node name="Timer" type="Timer" parent="." unique_id=474632171]
 unique_name_in_owner = true
