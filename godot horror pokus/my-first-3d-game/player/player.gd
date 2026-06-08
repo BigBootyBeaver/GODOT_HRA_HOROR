@@ -49,3 +49,21 @@ func shoot_bullet():
 	
 	%Timer.start()
 	
+func _on_detekce_zraneni_body_entered(body: Node) -> void:
+	# Ověříme, zda to, co do nás vrazilo, je ze skupiny "nepritel"
+	if body.is_in_group("nepritel"):
+		uber_zivot()
+
+func uber_zivot() -> void:
+	zivoty -= 1
+	print("Hráč dostal zásah! Zbývající životy: ", zivoty)
+	
+
+	
+	if zivoty <= 0:
+		print("Konec hry!")
+		restituuj_hru()
+
+func restituuj_hru() -> void:
+	# Restartuje aktuální scénu (úroveň) odznova
+	get_tree().reload_current_scene()

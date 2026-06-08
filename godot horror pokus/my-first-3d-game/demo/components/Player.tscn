@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://domhm87hbhbg1"]
 
-[ext_resource type="Script" uid="uid://dajlr3n5wjwmb" path="res://demo/src/Player.gd" id="1_nm1yx"]
+[ext_resource type="Script" uid="uid://dyl3cmc86koc" path="res://player/player.gd" id="1_mox7b"]
 [ext_resource type="Script" uid="uid://b62ppvc03a6b1" path="res://demo/src/CameraManager.gd" id="2_loos7"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_smq6u"]
@@ -16,7 +16,7 @@ height = 1.5
 
 [node name="Player" type="CharacterBody3D" unique_id=1240106982]
 collision_layer = 2
-script = ExtResource("1_nm1yx")
+script = ExtResource("1_mox7b")
 
 [node name="CameraManager" type="Node3D" parent="." unique_id=238089732]
 script = ExtResource("2_loos7")
