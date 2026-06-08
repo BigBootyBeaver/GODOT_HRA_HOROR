@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://og6a0k4g57e3" path="res://priroda_modely/kere/ker3/bush_03.tscn" id="19_boyg6"]
 [ext_resource type="PackedScene" uid="uid://jtga6u36qm1m" path="res://priroda_modely/kere/ker4/bush_04.tscn" id="20_e36ub"]
 [ext_resource type="PackedScene" uid="uid://d3f2kb64h2huq" path="res://priroda_modely/stromy/strom1/kombo_tree01.tscn" id="21_hb5m1"]
+[ext_resource type="PackedScene" uid="uid://c155fa8c2gbbs" path="res://mob/spawner/mob_spawner_3d.tscn" id="22_qhcbd"]
 [ext_resource type="PackedScene" uid="uid://yfqesavos7ny" path="res://mob/mob.tscn" id="22_x5p1p"]
 
 [sub_resource type="Environment" id="Environment_80nbo"]
@@ -178,6 +179,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 33)
 
 [node name="Node3D" parent="." unique_id=268743492 instance=ExtResource("21_hb5m1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 1, 41)
+
+[node name="MobSpawner3D" parent="Node3D" unique_id=608168903 instance=ExtResource("22_qhcbd")]
 
 [node name="Mob" parent="." unique_id=1153872926 instance=ExtResource("22_x5p1p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 1, 29)
