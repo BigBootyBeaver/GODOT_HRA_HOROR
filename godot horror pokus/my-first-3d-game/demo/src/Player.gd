@@ -1,5 +1,5 @@
 extends CharacterBody3D
-
+var zivoty: int = 3
 @export var MOVE_SPEED: float = 50.0
 @export var JUMP_SPEED: float = 2.0
 @export var first_person: bool = false : 
@@ -79,3 +79,25 @@ func _input(p_event: InputEvent) -> void:
 		# Else if up/down released
 		elif p_event.keycode in [ KEY_Q, KEY_E, KEY_SPACE ]:
 			velocity.y = 0
+			
+			
+			
+			
+func _on_detekce_zraneni_body_entered(body: Node) -> void:
+	# Ověříme, zda to, co do nás vrazilo, je ze skupiny "nepritel"
+	if body.is_in_group("nepritel"):
+		uber_zivot()
+
+func uber_zivot() -> void:
+	zivoty -= 1
+	print("Hráč dostal zásah! Zbývající životy: ", zivoty)
+	
+
+	
+	if zivoty <= 0:
+		print("Konec hry!")
+		restituuj_hru()
+
+func restituuj_hru() -> void:
+	# Restartuje aktuální scénu (úroveň) odznova
+	get_tree().reload_current_scene()

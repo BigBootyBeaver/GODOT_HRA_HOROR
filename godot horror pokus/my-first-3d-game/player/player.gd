@@ -1,5 +1,5 @@
 extends CharacterBody3D
-
+var zivoty: int = 3
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -48,4 +48,4 @@ func shoot_bullet():
 	new_bullet.global_transform = %Marker3D.global_transform
 	
 	%Timer.start()
-		
+	
