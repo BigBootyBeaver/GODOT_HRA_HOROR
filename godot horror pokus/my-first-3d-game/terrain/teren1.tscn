@@ -696,4 +696,37 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131.77307, 2.9883165, 136.623
 gravity_scale = 0.0
 
 [node name="MobSpawner3D" parent="." unique_id=608168903 instance=ExtResource("16_gnpsn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127.91939, 3.7977438, 135.89137)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 124.54215, 8.631719, 120.6604)
+
+[node name="MobSpawner3D2" parent="." unique_id=635390273 instance=ExtResource("16_gnpsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125.20551, 10.816726, 11.500309)
+
+[node name="MobSpawner3D3" parent="." unique_id=11309353 instance=ExtResource("16_gnpsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.65544, 8.62446, -1.0192595)
+
+[node name="MobSpawner3D4" parent="." unique_id=1880341849 instance=ExtResource("16_gnpsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.64962, 11.080541, -46.353977)
+
+[node name="MobSpawner3D5" parent="." unique_id=450274278 instance=ExtResource("16_gnpsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.33766, 7.65911, 55.45963)
+
+[node name="MobSpawner3D6" parent="." unique_id=1309712207 instance=ExtResource("16_gnpsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104.853546, 11.57138, 124.46578)
+
+[node name="MobSpawner3D7" parent="." unique_id=589760873 instance=ExtResource("16_gnpsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -121.713394, 12.9484005, -118.84891)
+
+[node name="MobSpawner3D8" parent="." unique_id=602765208 instance=ExtResource("16_gnpsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -142.0052, 10.818517, -69.61275)
+
+[node name="MobSpawner3D9" parent="." unique_id=1334799782 instance=ExtResource("16_gnpsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102.33554, 8.523394, -35.08897)
+
+[node name="MobSpawner3D10" parent="." unique_id=83587654 instance=ExtResource("16_gnpsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.333076, 15.263778, -123.62608)
+
+[node name="MobSpawner3D11" parent="." unique_id=669360497 instance=ExtResource("16_gnpsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -157.25563, 13.936331, 49.420357)
+
+[node name="MobSpawner3D12" parent="." unique_id=570270619 instance=ExtResource("16_gnpsn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 139.60555, 21.562902, -142.27281)
