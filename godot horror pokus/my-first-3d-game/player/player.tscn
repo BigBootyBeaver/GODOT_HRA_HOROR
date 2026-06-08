@@ -8,6 +8,8 @@
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_rkbax"]
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g1dw6"]
+
 [node name="Player" type="CharacterBody3D" unique_id=1487924112 groups=["player"]]
 script = ExtResource("1_rkbax")
 
@@ -35,3 +37,10 @@ one_shot = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1947557198]
 mesh = SubResource("CapsuleMesh_rkbax")
+
+[node name="DetekceNarazu" type="Area3D" parent="." unique_id=1754836390]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DetekceNarazu" unique_id=1278134384]
+shape = SubResource("CapsuleShape3D_g1dw6")
+
+[connection signal="body_entered" from="DetekceNarazu" to="." method="_on_detekce_narazu_body_entered"]

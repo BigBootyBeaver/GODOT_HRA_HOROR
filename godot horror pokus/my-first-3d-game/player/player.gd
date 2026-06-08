@@ -49,10 +49,17 @@ func shoot_bullet():
 	
 	%Timer.start()
 	
-func _on_detekce_zraneni_body_entered(body: Node) -> void:
-	# Ověříme, zda to, co do nás vrazilo, je ze skupiny "nepritel"
+
+
+
+
+
+func _on_detekce_narazu_body_entered(body: Node3D) -> void:
+	 # Ověříme, zda to, co do nás vrazilo, je ze skupiny "nepritel"
 	if body.is_in_group("nepritel"):
 		uber_zivot()
+
+
 
 func uber_zivot() -> void:
 	zivoty -= 1
