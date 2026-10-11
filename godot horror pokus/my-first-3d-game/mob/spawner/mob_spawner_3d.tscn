@@ -18,6 +18,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.864166, 0)
 
 [node name="Timer" type="Timer" parent="." unique_id=690251437]
 unique_name_in_owner = true
+wait_time = 10.0
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
